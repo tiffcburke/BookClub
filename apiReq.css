@@ -1,0 +1,51 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open-Sans', sans-serif;
+}
+
+body {
+    background: url("https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80");
+    overflow-x: hidden;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: .1.2rem;
+    font-family: cursive;
+
+}
+
+#btn {
+    background-color: #bfa3f3;
+    border-color: #a3c4f3;
+    border-radius: 50%;
+    color: white;
+    box-shadow: white;
+}
+
+#formSearch input {
+    border-color: #a3c4f3;
+    background-color: #e1c7ef;
+    margin: 10px;
+    color: white;
+    font-family: cursive;
+}
+
+#formSearch input::placeholder {
+    color: white;
+}
+
+ul {
+    margin: 20px;
+}
+
+li {
+    color: white;
+    font-weight: 800;
+    font-style: bold;
+    padding: 20px;
+}
