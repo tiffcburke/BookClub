@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The book choices are:</h1>
+    <div>
+        <ul>
+            <% for(let b of books){ %>
+                <li>
+                    <%=b.book%> - <b>
+                            <%=b.username%>
+                        </b>
+
+                </li>
+                <%}%>
+        </ul>
+    </div>
+
+    <h2>Book Notes:</h2>
+    <a href="/books/note">Add a note</a>
+    <div>
+        <ul>
+            <% for(let n of newNotes){ %>
+                <li>
+                    <b>
+                        <%=n.title%>:
+                    </b>
+                    <%=n.comment%>
+
+
+                </li>
+                <%}%>
+        </ul>
+    </div>
+</body>
+
+</html>
