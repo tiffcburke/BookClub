@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book Info</title>
+</head>
+
+<body>
+    <h1>Edit Book Info</h1>
+
+    <form action="/books/<%=book._id%>?_method=PUT" method="POST">
+        <label for="title"> Book Title</label>
+        <input type="text" id="title" name="title" placeholder="<%=book.title %>">
+
+        <label for="recommendedBy">Recommended by</label>
+        <input type="text" id="recommendedBy" name="recommendedBy" placeholder="<%=book.recommendedBy%>">
+
+        <label for="description">Book Description</label>
+        <textarea name="description" id="description" cols="30" rows="10"><%= book.description %></textarea>
+        <button>Submit</button>
+
+    </form>
+    <a href="/books">Home</a>
+
+</body>
+
+</html>
