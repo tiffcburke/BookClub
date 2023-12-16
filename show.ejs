@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+
+<body>
+    <h1>
+        <%=book.title%>
+    </h1>
+    <ul>
+        <li>
+            Recommended by <a href="/books?recommendedBy=<%=book.recommendedBy%>">
+                <%=book.recommendedBy%>
+            </a>
+        </li>
+        <li>Summary: <%=book.description %>
+        </li>
+    </ul>
+    <a href="/books">Back</a>
+    <a href="/books/<%=book._id%>/edit">edit</a>
+
+    <form action="/books/<%=book._id%>?_method=DELETE" method="POST">
+        <button>Delete Book</button>
+    </form>
+
+</body>
+
+</html>
