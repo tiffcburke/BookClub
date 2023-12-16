@@ -4,40 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Book Club</title>
 </head>
 
 <body>
-    <h1>The book choices are:</h1>
-    <div>
-        <ul>
-            <% for(let b of books){ %>
-                <li>
-                    <%=b.book%> - <b>
-                            <%=b.username%>
-                        </b>
 
-                </li>
-                <%}%>
-        </ul>
-    </div>
+    <h1>Book Club</h1>
+    <h2>
+        <%=recommendedBy%> Chronicles
+    </h2>
+    <ul>
+        <%for(let book of books){ %>
+            <li>
+                <a href="/books/<%= book._id %>">
+                    <%= book.title %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+    <a href="books/new">Add new book</a>
+    <%if(recommendedBy!== '' ) {%>
+        <a href="/books">All Chronicles</a>
+        <% } %>
 
-    <h2>Book Notes:</h2>
-    <a href="/books/note">Add a note</a>
-    <div>
-        <ul>
-            <% for(let n of newNotes){ %>
-                <li>
-                    <b>
-                        <%=n.title%>:
-                    </b>
-                    <%=n.comment%>
-
-
-                </li>
-                <%}%>
-        </ul>
-    </div>
 </body>
 
 </html>
