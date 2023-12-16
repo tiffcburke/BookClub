@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newest Book to Read!</title>
+</head>
+
+<body>
+    <h1>New Book Entry</h1>
+
+    <form action="/books" method="POST">
+        <label for="title"> Book Title</label>
+        <input type="text" id="title" name="title" placeholder="book title">
+        <label for="recommendedBy">Recommended by</label>
+        <input type="text" id="recommendedBy" name="recommendedBy" placeholder="club member name">
+        <label for="description">Book Description</label>
+        <textarea name="description" id="description" cols="30" rows="10">it was a dark and stormy night...</textarea>
+        <button>Add New Book</button>
+
+    </form>
+    <a href="/books">Home</a>
+
+</body>
+
+</html>
